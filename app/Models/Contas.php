@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Contas extends Model
 {
     use HasFactory;
-    protected $fillable = ['saldo','conta_id'];
+    protected $fillable = ['valor','conta_id'];
 }
