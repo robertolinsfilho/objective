@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('transacoes', function (Blueprint $table) {
             $table->id();
             $table->integer('conta_id')->nullable(false);
-            $table->integer('valor')->nullable(false);
+            $table->decimal('valor',12,2)->nullable(false);
             $table->timestamps();
         });
     }
