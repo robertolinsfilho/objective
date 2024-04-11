@@ -23,13 +23,13 @@ class ApiTransacoesController extends Controller
 
         $validator = Validator::make($request->all(), [
             'conta_id' => 'required|integer',
-            'valor' => 'required|integer',
+            'valor' => 'required',
             'forma_pagamento' => 'required|string'
         ]);
 
         if ($validator->fails()) {
             return response()->json([
-                'messagem' => 'Campos estão faltando'
+                'messagem' => 'Campos estao faltando ou incorretos'
             ], 404);
         }
 
